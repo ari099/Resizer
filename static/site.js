@@ -24,8 +24,8 @@ const App = props => {
             
             // Resize the image....
             axios.post("/resize/", formData, { responseType: "blob" }).then(response => {
-                console.log(response.data);
-                console.log(response.data.type);
+                // console.log(response.data);
+                // console.log(response.data.type);
                 if(response.data.type !== "application/json") { setImage(response.data); setResized(true); }
                 else { setTooSmall(true); setResized(false); }
             });
