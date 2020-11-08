@@ -17,14 +17,6 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def index():
     return render_template('index.html', page='Home Page')
 
-@app.route('/about/', methods=['GET'])
-def about():
-    return render_template('about.html', page='Home Page')
-
-@app.route('/contact/', methods=['GET'])
-def contact():
-    return render_template('contact.html', page='Home Page')
-
 @app.route('/resize/', methods=['POST'])
 def resize():
     # Load image file
