@@ -1,0 +1,26 @@
+.resizer-img {
+   height: 300px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   box-shadow: 2.5px 2.5px 5px 0px rgba(24, 68, 212, 0.479);
+}
+
+.resizer-button {
+   font-family: 'Segoe UI Black';
+   margin: 15px;
+}
+
+.resizer-input-file {
+   margin: 10px;
+   cursor: pointer;
+   font-family: 'Segoe UI Light';
+}
+
+.resizer-label {
+   font-family: 'Segoe UI Light';
+}
+
+.resizer-title {
+   font-family: 'Segoe UI Black';
+}

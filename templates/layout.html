@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Resizer => {{ page }}</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename = 'bootstrap.min.css') }}" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+      <!-- <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css"> -->
+      <link rel="stylesheet" href="{{ url_for('static', filename = 'site.css') }}" />
+   </head>
+   <body class="bg-light text-white">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+         <a class="navbar-brand resizer-title" href="/">Resizer</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+               <!-- <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a> -->
+               <!-- <a class="nav-item nav-link" href="/Postcards">Postcards</a> -->
+            </div>
+         </div>
+      </nav>
+      
+      <br />
+      <div class="container-fluid">
+         {% block content %}{% endblock %}
+      </div>
+
+      <!-- Load React. -->
+      <script src="{{ url_for('static', filename = 'react.development.js') }}" crossorigin></script>
+      <script src="{{ url_for('static', filename = 'react-dom.development.js') }}" crossorigin></script>
+
+      <!-- Axios -->
+      <script src="{{ url_for('static', filename = 'axios.min.js') }}" crossorigin></script>
+      
+      <!-- Bootstrap Scripts -->
+      <script src="{{ url_for('static', filename = 'jquery-3.2.1.slim.min.js') }}" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="{{ url_for('static', filename = 'popper.min.js') }}" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="{{ url_for('static', filename = 'bootstrap.min.js') }}" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+      <!-- jQuery Scripts -->
+      <script src="{{ url_for('static', filename = 'jquery.min.js') }}"></script>
+      
+      <!-- Load Babel -->
+      <script src="{{ url_for('static', filename = 'babel.min.js') }}"></script>
+      <!-- Custom Scripts -->
+      <script type="text/babel" src="{{ url_for('static', filename = 'site.js') }}" ></script>
+   </body>
+</html>
